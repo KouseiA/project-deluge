@@ -1,0 +1,178 @@
+const monsters = [
+  // Flameling line
+  {
+    id: 1,
+    name: "Flameling",
+    type: "Fire",
+    image: "https://placehold.co/100x100?text=Flameling",
+    description: "A fiery little monster with a burning spirit.",
+    stats: { hp: 30, attack: 12, defense: 8, speed: 10 },
+    abilities: [
+      { name: "Ember", type: "damage", power: 10 },
+      { name: "Flame Charge", type: "damage", power: 14 },
+    ],
+    level: 1,
+    evolvesTo: 7,
+    evolutionLevel: 5,
+  },
+  {
+    id: 7,
+    name: "Flareonix",
+    type: "Fire",
+    image: "https://placehold.co/100x100?text=Flareonix",
+    description: "A blazing evolved form of Flameling.",
+    stats: { hp: 45, attack: 18, defense: 12, speed: 14 },
+    abilities: [
+      { name: "Flame Burst", type: "damage", power: 18 },
+      { name: "Inferno", type: "damage", power: 24 },
+    ],
+    level: 5,
+  },
+  // Aquaphoon line
+  {
+    id: 2,
+    name: "Aquaphoon",
+    type: "Water",
+    image: "https://placehold.co/100x100?text=Aquaphoon",
+    description: "A swirling water creature that loves to splash.",
+    stats: { hp: 35, attack: 10, defense: 10, speed: 8 },
+    abilities: [
+      { name: "Splash", type: "heal", power: 10 },
+      { name: "Water Gun", type: "damage", power: 12 },
+    ],
+    level: 1,
+    evolvesTo: 8,
+    evolutionLevel: 6,
+  },
+  {
+    id: 8,
+    name: "Hydrake",
+    type: "Water",
+    image: "https://placehold.co/100x100?text=Hydrake",
+    description: "A powerful evolved form of Aquaphoon.",
+    stats: { hp: 55, attack: 16, defense: 15, speed: 12 },
+    abilities: [
+      { name: "Aqua Tail", type: "damage", power: 20 },
+      { name: "Hydro Pump", type: "damage", power: 28 },
+    ],
+    level: 6,
+  },
+  // Leafairy line
+  {
+    id: 3,
+    name: "Leafairy",
+    type: "Grass",
+    image: "https://placehold.co/100x100?text=Leafairy",
+    description: "A gentle monster that floats on the wind.",
+    stats: { hp: 28, attack: 9, defense: 12, speed: 12 },
+    abilities: [
+      { name: "Vine Whip", type: "damage", power: 9 },
+      { name: "Leaf Dance", type: "damage", power: 13 },
+    ],
+    level: 1,
+    evolvesTo: 9,
+    evolutionLevel: 7,
+  },
+  {
+    id: 9,
+    name: "Floraflutter",
+    type: "Grass",
+    image: "https://placehold.co/100x100?text=Floraflutter",
+    description: "A majestic, blooming evolution of Leafairy.",
+    stats: { hp: 44, attack: 15, defense: 18, speed: 18 },
+    abilities: [
+      { name: "Petal Dance", type: "damage", power: 18 },
+      { name: "Solar Beam", type: "damage", power: 25 },
+    ],
+    level: 7,
+  },
+  // Stonox line
+  {
+    id: 4,
+    name: "Stonox",
+    type: "Rock",
+    image: "https://placehold.co/100x100?text=Stonox",
+    description: "A sturdy monster with a rocky shell.",
+    stats: { hp: 40, attack: 8, defense: 15, speed: 5 },
+    abilities: [
+      { name: "Rock Throw", type: "damage", power: 10 },
+      { name: "Harden", type: "buff", stat: "defense", power: 5 },
+    ],
+    level: 1,
+    evolvesTo: 10,
+    evolutionLevel: 8,
+  },
+  {
+    id: 10,
+    name: "Granitus",
+    type: "Rock",
+    image: "https://placehold.co/100x100?text=Granitus",
+    description: "A massive, granite-armored evolution of Stonox.",
+    stats: { hp: 65, attack: 14, defense: 25, speed: 7 },
+    abilities: [
+      { name: "Stone Edge", type: "damage", power: 22 },
+      { name: "Earthquake", type: "damage", power: 30 },
+    ],
+    level: 8,
+  },
+  // Electrowl line
+  {
+    id: 5,
+    name: "Electrowl",
+    type: "Electric",
+    image: "https://placehold.co/100x100?text=Electrowl",
+    description: "A wise owl that crackles with electricity.",
+    stats: { hp: 25, attack: 14, defense: 7, speed: 15 },
+    abilities: [
+      { name: "Thunder Shock", type: "damage", power: 13 },
+      { name: "Quick Attack", type: "damage", power: 10 },
+    ],
+    level: 1,
+    evolvesTo: 11,
+    evolutionLevel: 6,
+  },
+  {
+    id: 11,
+    name: "Voltowl",
+    type: "Electric",
+    image: "https://placehold.co/100x100?text=Voltowl",
+    description: "A stormy, electrified evolution of Electrowl.",
+    stats: { hp: 38, attack: 22, defense: 12, speed: 23 },
+    abilities: [
+      { name: "Thunderbolt", type: "damage", power: 22 },
+      { name: "Agility", type: "buff", stat: "speed", power: 5 },
+    ],
+    level: 6,
+  },
+  // Frostooth line
+  {
+    id: 6,
+    name: "Frostooth",
+    type: "Ice",
+    image: "https://placehold.co/100x100?text=Frostooth",
+    description: "A chilly monster with sharp, icy fangs.",
+    stats: { hp: 32, attack: 13, defense: 9, speed: 11 },
+    abilities: [
+      { name: "Ice Fang", type: "damage", power: 14 },
+      { name: "Snowball", type: "damage", power: 10 },
+    ],
+    level: 1,
+    evolvesTo: 12,
+    evolutionLevel: 7,
+  },
+  {
+    id: 12,
+    name: "Glaciobra",
+    type: "Ice",
+    image: "https://placehold.co/100x100?text=Glaciobra",
+    description: "A fierce, glacial evolution of Frostooth.",
+    stats: { hp: 50, attack: 20, defense: 15, speed: 17 },
+    abilities: [
+      { name: "Blizzard", type: "damage", power: 25 },
+      { name: "Ice Beam", type: "damage", power: 20 },
+    ],
+    level: 7,
+  },
+];
+
+export default monsters;
